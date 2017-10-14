@@ -19,6 +19,15 @@ NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
 ```
 Get all data
 ```objc
-NSArray *allData = [[NSArray alloc]  init];
-allData = [DBManager getAllData:@"Users"]; // pass table name.
+NSArray *users = [[NSArray alloc]  init];
+
+users = [DBManager getAllData:@"Users"]; // pass table name.
+```
+
+Get single data by ID 
+
+```objc
+NSArray *user = [[NSArray alloc]  init];
+
+user = [DBManager findDataWithId:1 tableName:@"Users"]; // pass id and table name.
 ```
