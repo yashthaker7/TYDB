@@ -9,13 +9,12 @@ Manually:
 
 How to use 
 ---------
-Insert data
+Insert data with dictionary
 ```objc
 NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
-    
-    [data setObject:@"Yash" forKey:@"Name"];
-    [data setObject:@"yashthaker7@gmail.com" forKey:@"Email"];
-    
-    [DBManager insertData:data tableName:@"Users"];
+[data setObject:@"Yash" forKey:@"Name"];
+[data setObject:@"yashthaker7@gmail.com" forKey:@"Email"];
+
+[DBManager insertData:data tableName:@"Users"];
 ```
 
