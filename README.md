@@ -17,6 +17,7 @@ NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
 
 [DBManager createTable:@"Users" withDictionary:data]; // pass dictionary and table name.
 ```
+
 Insert data
 ```objc
 NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
@@ -25,18 +26,22 @@ NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
 
 [DBManager insertData:data tableName:@"Users"]; // pass dictionary and table name.
 ```
-Get all data
-```objc
-NSArray *users = [[NSArray alloc] initWithArray:[DBManager getAllData:@"Users"]]; // pass table name.
-```
+
 Get single data 
 ```objc
 NSArray *user = [[NSArray alloc] initWithArray:[DBManager findDataWithId:2 tableName:@"Users"]]; // pass id and table name.
 ```
+
+Get all data
+```objc
+NSArray *users = [[NSArray alloc] initWithArray:[DBManager getAllData:@"Users"]]; // pass table name.
+```
+
 Delete data
 ```objc
 BOOL delete = [DBManager deleteDataWithId:1 tableName:@"Users"]; // pass id and table name.
 ```
+
 Update data
 ```objc
 NSMutableDictionary *updateData = [[NSMutableDictionary alloc] init];
@@ -45,6 +50,7 @@ NSMutableDictionary *updateData = [[NSMutableDictionary alloc] init];
 
 [DBManager updateData:updateData id:1 tableName:@"Users"];
 ```
+
 Get database path
 ```objc
 NSString *getPath = [DBManager getDBPath];
