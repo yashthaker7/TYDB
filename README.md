@@ -20,5 +20,5 @@ NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
 Get all data
 ```objc
 NSArray *allData = [[NSArray alloc]  init];
-allData = [DBManager getAllData:@"Users"]; // pass here table name 
+allData = [DBManager getAllData:@"Users"]; // pass table name here.
 ```
