@@ -9,7 +9,7 @@ Manually:
 
 How to use 
 ---------
-Insert data with dictionary
+Insert data
 ```objc
 NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
 [data setObject:@"Yash" forKey:@"Name"];
@@ -20,5 +20,5 @@ NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
 Get all data
 ```objc
 NSArray *allData = [[NSArray alloc]  init];
-allData = [DBManager getAllData:@"Users"]; // tableName
+allData = [DBManager getAllData:@"Users"]; // pass here table name 
 ```
