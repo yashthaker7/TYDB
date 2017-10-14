@@ -11,7 +11,11 @@ How to use
 ---------
 Creat table 
 ```objc
+NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
+[data setObject:@"Yash" forKey:@"Name"];
+[data setObject:@"yashthaker7@gmail.com" forKey:@"Email"];
 
+[DBManager createTable:@"Users" withDictionary:data]; // pass dictionary and table name.
 ```
 Insert data
 ```objc
