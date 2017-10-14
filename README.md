@@ -21,11 +21,11 @@ Get all data
 ```objc
 NSArray *users = [[NSArray alloc] initWithArray:[DBManager getAllData:@"Users"]]; // pass table name.
 ```
-Get single data by ID 
+Get single data with ID 
 ```objc
 NSArray *user = [[NSArray alloc] initWithArray:[DBManager findDataWithId:2 tableName:@"Users"]]; // pass id and table name.
 ```
-Delete data by ID
+Delete data with ID
 ```objc
 BOOL delete = [DBManager deleteDataWithId:1 tableName:@"Users"]; // pass id and table name.
 ```
