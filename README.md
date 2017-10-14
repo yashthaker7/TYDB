@@ -39,7 +39,7 @@ Update data
 ```
 Get database path
 ```objc
-
+NSString *getPath = [DBManager getDBPath];
 ```
 
 
