@@ -1,6 +1,4 @@
-# Database
-
-Setup Instructions
+# Setup Instructions
 ------------------
 Manually:
 
