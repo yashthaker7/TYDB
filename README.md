@@ -17,4 +17,8 @@ NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
 
 [DBManager insertData:data tableName:@"Users"];
 ```
-
+Get all data
+```objc
+NSArray *allData = [[NSArray alloc]  init];
+allData = [DBManager getAllData:@"Users"]; // tableName
+```
