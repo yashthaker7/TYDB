@@ -23,7 +23,7 @@ NSArray *users = [[NSArray alloc] initWithArray:[DBManager getAllData:@"Users"]]
 ```
 Get single data by ID 
 ```objc
-NSArray *user = [[NSArray alloc]  initWithArray:[DBManager findDataWithId:2 tableName:@"Users"]]; // pass id and table name.
+NSArray *user = [[NSArray alloc] initWithArray:[DBManager findDataWithId:2 tableName:@"Users"]]; // pass id and table name.
 ```
 Delete data by ID
 ```objc
