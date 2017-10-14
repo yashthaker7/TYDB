@@ -39,7 +39,11 @@ BOOL delete = [DBManager deleteDataWithId:1 tableName:@"Users"]; // pass id and 
 ```
 Update data
 ```objc
+NSMutableDictionary *updateData = [[NSMutableDictionary alloc] init];
+[updateData setObject:@"update" forKey:@"Name"];
+[updateData setObject:@"update@gmail.com" forKey:@"Email"];
 
+[DBManager updateData:updateData id:1 tableName:@"Users"];
 ```
 Get database path
 ```objc
