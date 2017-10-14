@@ -9,7 +9,7 @@ Manually:
 
 How to use 
 ---------
-#Insert data
+Insert data
 ```objc
 NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
     
@@ -17,5 +17,5 @@ NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
     [data setObject:@"yashthaker7@gmail.com" forKey:@"Email"];
     
     [DBManager insertData:data tableName:@"Users"];
-Updating this Soon.
 ```
+
