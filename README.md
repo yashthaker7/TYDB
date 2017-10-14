@@ -9,6 +9,10 @@ Manually:
 
 How to use 
 ---------
+Creat table 
+```objc
+
+```
 Insert data
 ```objc
 NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
@@ -21,13 +25,21 @@ Get all data
 ```objc
 NSArray *users = [[NSArray alloc] initWithArray:[DBManager getAllData:@"Users"]]; // pass table name.
 ```
-Get single data with ID 
+Get single data 
 ```objc
 NSArray *user = [[NSArray alloc] initWithArray:[DBManager findDataWithId:2 tableName:@"Users"]]; // pass id and table name.
 ```
-Delete data with ID
+Delete data
 ```objc
 BOOL delete = [DBManager deleteDataWithId:1 tableName:@"Users"]; // pass id and table name.
+```
+Update data
+```objc
+
+```
+Get database path
+```objc
+
 ```
 
 
