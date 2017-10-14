@@ -43,7 +43,7 @@ NSMutableDictionary *updateData = [[NSMutableDictionary alloc] init];
 [updateData setObject:@"update" forKey:@"Name"];
 [updateData setObject:@"update@gmail.com" forKey:@"Email"];
 
-[DBManager updateData:updateData id:1 tableName:@"Users"];
+[DBManager updateData:updateData id:1 tableName:@"Users"]; // pass dictionary, id and table name.
 ```
 Get database path
 ```objc
