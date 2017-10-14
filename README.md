@@ -15,10 +15,10 @@ NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
 [data setObject:@"Yash" forKey:@"Name"];
 [data setObject:@"yashthaker7@gmail.com" forKey:@"Email"];
 
-[DBManager insertData:data tableName:@"Users"];
+[DBManager insertData:data tableName:@"Users"]; // pass dictionary and table name.
 ```
 Get all data
 ```objc
 NSArray *allData = [[NSArray alloc]  init];
-allData = [DBManager getAllData:@"Users"]; // pass table name here.
+allData = [DBManager getAllData:@"Users"]; // pass table name.
 ```
