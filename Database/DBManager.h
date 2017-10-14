@@ -11,28 +11,22 @@
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
 
-@interface DBManager : NSObject{
-    
-    NSString *databasePath;
-    sqlite3 *database;
-    sqlite3_stmt *statement;
-}
--(NSString *)getDBPath;
+@interface DBManager : NSObject
 
--(void)copyDatabaseIfNeeded;
++(NSString *)getDBPath;
 
--(BOOL)createDB:(NSMutableDictionary*)Dict tableName:(NSString*)tableName;
++(void)copyDatabaseIfNeeded;
 
--(BOOL) insertData:(NSMutableDictionary*)Dict tableName:(NSString*)tableName;
++(BOOL)createTable:(NSString*)tableName withDictionary:(NSMutableDictionary*)Dict;
 
--(NSArray*) findById:(int)ID tableName:(NSString*)tableName;
++(BOOL) insertData:(NSMutableDictionary*)Dict tableName:(NSString*)tableName;
 
--(NSArray*) showAllData:(NSString*)tableName;
++(NSArray*) findDataWithId:(int)ID tableName:(NSString*)tableName;
 
-- (BOOL) deleteData:(int)ID tableName:(NSString*)tableName;
++(NSArray*) getAllData:(NSString*)tableName;
 
--(BOOL) updateData:(NSMutableDictionary*)dict tableName:(NSString*)tableName;
++(BOOL) deleteDataWithId:(int)ID tableName:(NSString*)tableName;
 
-
++(BOOL) updateData:(NSMutableDictionary*)dict id:(int)ID tableName:(NSString*)tableName;
 
 @end
