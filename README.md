@@ -25,11 +25,11 @@ NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
 
 [DBManager insertData:data tableName:@"Users"]; // pass dictionary and table name.
 ```
-Get single data / Find single data with ID
+Get single data or find single data with ID
 ```objc
 NSArray *user = [[NSArray alloc] initWithArray:[DBManager findDataWithId:2 tableName:@"Users"]]; // pass id and table name.
 ```
-Get / Find data with query
+Get or find data with query
 ```objc
 NSString *query = [NSString stringWithFormat:@"select * from Users"];
 NSArray *user = [[NSArray alloc] initWithArray:[DBManager findDataWithQuery:query]]; // pass query.
