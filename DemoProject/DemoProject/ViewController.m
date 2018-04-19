@@ -36,8 +36,15 @@
     
     
     
-//    // Get Single Data
+//    // Get Single Data / Find single data
 //    NSArray *user = [[NSArray alloc] initWithArray:[DBManager findDataWithId:1 tableName:@"Users"]];
+//    NSLog(@"%@", user);
+    
+    
+
+//    // Get Data with query
+//    NSString *query = [NSString stringWithFormat:@"select * from Users"];
+//    NSArray *user = [[NSArray alloc] initWithArray:[DBManager findDataWithQuery:query]];
 //    NSLog(@"%@", user);
     
     

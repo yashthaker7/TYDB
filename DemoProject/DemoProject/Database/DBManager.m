@@ -229,6 +229,55 @@ static sqlite3_stmt *statement;
     return nil;
 }
 
++(NSArray*) findDataWithQuery:(NSString*)query {
+    const char *dbpath = [[self getDBPath] UTF8String];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat: @"%@", query];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        NSMutableArray *resultArray = [[NSMutableArray alloc]init];
+        if (sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            while (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
+                
+                // Get the total number of columns.
+                int totalColumns = sqlite3_column_count(statement);
+                
+                // Go through all columns and fetch each column data.
+                for (int i=0; i<totalColumns; i++)
+                {
+                    // Convert the column data to text (characters).
+                    char *dbDataAsChars = (char *)sqlite3_column_text(statement, i);
+                    char *columnName = (char *)sqlite3_column_name(statement,i);
+                    // If there are contents in the currenct column (field) then add them to the current row array.
+                    if (dbDataAsChars != NULL) {
+                        // Convert the characters to string.
+                        [data setObject:[NSString  stringWithUTF8String:dbDataAsChars] forKey:[NSString stringWithUTF8String:columnName]];
+                    }
+                }
+                [resultArray addObject:data];
+            }
+            sqlite3_finalize(statement);
+            sqlite3_close(database);
+            //NSLog(@"%@", resultArray);
+            return resultArray;
+        }
+        else
+        {
+            NSLog(@"Not found");
+            sqlite3_finalize(statement);
+            sqlite3_close(database);
+            return nil;
+        }
+    }
+    sqlite3_finalize(statement);
+    sqlite3_close(database);
+    return nil;
+}
+
 +(NSArray*) getAllData:(NSString*)tableName
 {
     const char *dbpath = [[self getDBPath] UTF8String];

@@ -25,19 +25,24 @@ NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
 
 [DBManager insertData:data tableName:@"Users"]; // pass dictionary and table name.
 ```
-Get single data 
+Get single data / Find single data with ID
 ```objc
 NSArray *user = [[NSArray alloc] initWithArray:[DBManager findDataWithId:2 tableName:@"Users"]]; // pass id and table name.
+```
+Get / Find data with query
+```objc
+NSString *query = [NSString stringWithFormat:@"select * from Users"];
+NSArray *user = [[NSArray alloc] initWithArray:[DBManager findDataWithQuery:query]]; // pass query.
 ```
 Get all data
 ```objc
 NSArray *users = [[NSArray alloc] initWithArray:[DBManager getAllData:@"Users"]]; // pass table name.
 ```
-Delete data
+Delete data with ID
 ```objc
 BOOL delete = [DBManager deleteDataWithId:1 tableName:@"Users"]; // pass id and table name.
 ```
-Update data
+Update data with ID
 ```objc
 NSMutableDictionary *updateData = [[NSMutableDictionary alloc] init];
 [updateData setObject:@"update" forKey:@"Name"];

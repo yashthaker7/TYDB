@@ -317,7 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZQXM6EAC55;
+				DEVELOPMENT_TEAM = FWQ7N3RX7G;
 				INFOPLIST_FILE = "$(SRCROOT)/DemoProject/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YashThaker.DatabaseDemo;
@@ -331,7 +331,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZQXM6EAC55;
+				DEVELOPMENT_TEAM = FWQ7N3RX7G;
 				INFOPLIST_FILE = "$(SRCROOT)/DemoProject/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YashThaker.DatabaseDemo;

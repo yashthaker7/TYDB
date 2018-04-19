@@ -23,6 +23,8 @@
 
 +(NSArray*) findDataWithId:(int)ID tableName:(NSString*)tableName;
 
++(NSArray*) findDataWithQuery:(NSString*)query;
+
 +(NSArray*) getAllData:(NSString*)tableName;
 
 +(BOOL) deleteDataWithId:(int)ID tableName:(NSString*)tableName;
