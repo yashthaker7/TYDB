@@ -12,7 +12,7 @@ Manually:
 
 How to use 
 ---------
-Creat table
+Create table
 ---------
 ```objc
 NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
