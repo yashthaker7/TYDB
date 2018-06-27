@@ -1,5 +1,6 @@
 # Simplest SQLite manager for iOS. 
 
+
 Setup Instructions
 ---------
 Manually:
@@ -9,9 +10,9 @@ Manually:
 ```objc 
 [DBManager copyDatabaseIfNeeded]; 
 ```
-
 How to use 
 ---------
+
 Create table
 ---------
 ```objc
@@ -52,6 +53,7 @@ Delete data with ID
 BOOL delete = [DBManager deleteDataWithId:1 tableName:@"Users"]; // pass id and table name.
 ```
 Update data with ID
+---------
 ```objc
 NSMutableDictionary *updateData = [[NSMutableDictionary alloc] init];
 [updateData setObject:@"update" forKey:@"Name"];
@@ -60,6 +62,7 @@ NSMutableDictionary *updateData = [[NSMutableDictionary alloc] init];
 [DBManager updateData:updateData id:1 tableName:@"Users"]; // pass dictionary, id and table name.
 ```
 Get database path
+---------
 ```objc
 NSString *getPath = [DBManager getDBPath];
 ```
