@@ -1,4 +1,7 @@
-# Setup Instructions
+# Simplest SQLite manager for iOS. 
+
+Setup Instructions
+---------
 Manually:
 1. Add `Database` folder to your project.
 2. Add `libsqlite3.tbd` or `libsqlite3.0.tbd` to Project -> General -> Linked Frameworks and Libraries.
@@ -9,7 +12,8 @@ Manually:
 
 How to use 
 ---------
-Creat table 
+Creat table
+---------
 ```objc
 NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
 [data setObject:@"Yash" forKey:@"Name"];
@@ -18,6 +22,7 @@ NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
 [DBManager createTable:@"Users" withDictionary:data]; // pass dictionary and table name.
 ```
 Insert data
+---------
 ```objc
 NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
 [data setObject:@"Yash" forKey:@"Name"];
@@ -26,19 +31,23 @@ NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
 [DBManager insertData:data tableName:@"Users"]; // pass dictionary and table name.
 ```
 Get single data or find single data with ID
+---------
 ```objc
 NSArray *user = [[NSArray alloc] initWithArray:[DBManager findDataWithId:2 tableName:@"Users"]]; // pass id and table name.
 ```
 Get or find data with query
+---------
 ```objc
 NSString *query = [NSString stringWithFormat:@"select * from Users"];
 NSArray *user = [[NSArray alloc] initWithArray:[DBManager findDataWithQuery:query]]; // pass query.
 ```
 Get all data
+---------
 ```objc
 NSArray *users = [[NSArray alloc] initWithArray:[DBManager getAllData:@"Users"]]; // pass table name.
 ```
 Delete data with ID
+---------
 ```objc
 BOOL delete = [DBManager deleteDataWithId:1 tableName:@"Users"]; // pass id and table name.
 ```
